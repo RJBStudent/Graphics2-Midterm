@@ -44,8 +44,8 @@ struct MyState
 };
 
 
-
-//[DllImport("animal3D-DemoProject")]
+//public class unitydll : MonoBehavior {
+//[DllImport("animal3D-DemoProject")]	//THIS GOES INTO UNITY SCRIPT 
 //static extern void nameoffunction(params);
 
 
