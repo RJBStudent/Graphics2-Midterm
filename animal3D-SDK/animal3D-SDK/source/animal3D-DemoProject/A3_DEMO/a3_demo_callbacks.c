@@ -60,11 +60,19 @@ extern "C"
 {
 #endif
 
-	A3DYLIBEXPORT int TestOutput() { return 26; }
+	A3DYLIBEXPORT int TestOutput();
 
 #ifdef __cplusplus
 }
 #endif
+
+
+int TestOutput()
+{
+	return 26;
+}
+
+
 
 /*
 //-----------------------------------------------------------------------------
