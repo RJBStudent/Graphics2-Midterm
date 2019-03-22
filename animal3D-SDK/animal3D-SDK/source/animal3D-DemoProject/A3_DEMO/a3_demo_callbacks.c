@@ -50,10 +50,21 @@ struct MyState
 
 
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+	A3DYLIBEXPORT int TestOutput() { return 26; }
+
+#ifdef __cplusplus
+}
+#endif
 
 /*
 //-----------------------------------------------------------------------------
