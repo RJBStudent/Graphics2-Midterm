@@ -17,7 +17,7 @@ public class TestScripts : MonoBehaviour
     // Other platforms load plugins dynamically, so pass the name
     // of the plugin's dynamic library.
     [DllImport("UnityTestDll.dll")]
-    static extern int TestOutput();
+    private static extern int foo();
 
 #endif
 
@@ -25,6 +25,6 @@ public class TestScripts : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(TestOutput());
+        Debug.Log(foo());
     }
 }
