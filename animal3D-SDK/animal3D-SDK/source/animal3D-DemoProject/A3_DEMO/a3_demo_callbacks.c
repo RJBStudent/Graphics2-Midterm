@@ -48,30 +48,37 @@ struct MyState
 //[DllImport("animal3D-DemoProject")]
 //static extern void nameoffunction(params);
 
-
+#include <SDKDDKVer.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 
-
-#ifdef __cplusplus
+#ifdef __c
 extern "C"
 {
 #endif
 
-	int	A3DYLIBEXPORT  TestOutput();
+	int	A3DYLIBSYMBOL TestOutput();
 
-#ifdef __cplusplus
+#ifdef __c
 }
 #endif
 
+#ifdef __c
+extern "C"
+{
+#endif
 
 int TestOutput()
 {
 	return 26;
 }
 
+#ifdef __c
+}
+#endif
 
 
 /*
