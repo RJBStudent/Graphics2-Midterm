@@ -126,6 +126,9 @@
     <ClCompile Include="..\..\..\source\animal3D-DemoProject\A3_DEMO\_demo_graphics\a3_RenderPipeline.c">
       <Filter>Source Files\common\A3_DEMO\_demo_graphics</Filter>
     </ClCompile>
+    <ClCompile Include="UnityDllGate.cpp">
+      <Filter>Source Files\common\A3_DEMO</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\animal3D-DemoProject\a3_dylib_config_export.h">
@@ -142,6 +145,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\animal3D-DemoProject\A3_DEMO\_demo_graphics\a3_RenderPipeline.h">
       <Filter>Header Files\A3_DEMO\_demo_graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="UnityDllGate.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
