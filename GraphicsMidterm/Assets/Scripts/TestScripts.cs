@@ -16,15 +16,14 @@ public class TestScripts : MonoBehaviour
 
     // Other platforms load plugins dynamically, so pass the name
     // of the plugin's dynamic library.
-    [DllImport("animal3D-DemoProject")]
-    static extern int TestOutput();
-
+    [DllImport("animal3D-DemoProjects", EntryPoint = "foo")]
+    private static extern int foo();
 #endif
 
-    //private static extern int TestOutput();
+
 
     void Start()
     {
-        Debug.Log(TestOutput());
+        Debug.Log(foo());
     }
 }
