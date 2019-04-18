@@ -18,12 +18,11 @@ have decided to create a plugin for Unity to provide more power over the render 
    "C:\Program Files\Unity\Hub\Editor\2018.3.5f1\Editor\Unity.exe" -force-opengl
 5. Create a new project or open a older one
 6. Create a folder called Plugins in the asset hierarchy, then inside that create another folder
-   labeled x86
-7. Inside of Animal3D's bin/x86/v140/Release/(project name) drag the dll into the x86 folder you 
+   labeled x86_64
+7. Inside of Animal3D's bin/x64/v140/Release/(project name) drag the dll into the x86_64 folder you 
    created in unity
 8. In your script of choice in Unity, add "using System.Runtime.InteropServices;"
    at the top
 9. At the top of the class add [DllImport("dllName")] and whatever function you are externing below it.
    the function should follow the guidelines static extern (return type) (FunctionName)(Parameters);
 10. Repeat step 8 and 9 for each script with the necessary functions
-
