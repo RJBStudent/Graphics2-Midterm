@@ -1,3 +1,9 @@
+#Animal3D Plugin for Unity
+
+> Created by: RJ Bourdelais and Josh Grazda
+
+## Set-up Animal#D DLL for Unity
+
 How to set up Animal 3D Dll
 
 1) Launch Animal3D LAUNCH_VS.bat
