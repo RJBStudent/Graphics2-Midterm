@@ -34,8 +34,6 @@
 
 #include "animal3D/a3/a3types_integer.h"
 
-
-
 typedef struct MyState MyState;
 
 struct MyState
@@ -49,7 +47,7 @@ struct MyState
 //static extern void nameoffunction(params);
 
 #include <SDKDDKVer.h>
-
+#include <gl/glew.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,6 +59,7 @@ extern "C"
 #endif
 
 	int	A3DYLIBSYMBOL TestOutput();
+	a3ret A3DYLIBSYMBOL ColorScreen();
 
 #ifdef __c
 }
@@ -74,6 +73,13 @@ extern "C"
 int TestOutput()
 {
 	return 26;
+}
+
+a3ret ColorScreen()
+{
+	glClearColor(1, 0, 0, 1);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	return 3;
 }
 
 #ifdef __c
