@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
@@ -20,15 +21,19 @@ public class TestScripts : MonoBehaviour
     private static extern int foo();
     [DllImport("animal3D-DemoProject_x64")]
     private static extern int ColorScreen();
+    [DllImport("animal3D-DemoProject_x64")]
+    private static extern IntPtr Execute();
 
     void Start()
     {
-        Debug.Log(foo());
+        // Debug.Log(foo());
     }
 
     void OnPostRender()
     {
-        Debug.Log(ColorScreen());
+        GL.IssuePluginEvent(Execute(), 1);
+
+        // Debug.Log(ColorScreen());
         // OpenGL call that will turn camera red after rendering has happened
         // needs to be called every frame since camera renders every frame (does not work in Update)
         // GL.Clear(false, true, Color.red);

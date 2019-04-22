@@ -16,7 +16,7 @@ extern "C"
 
 void Rendering()
 {
-	glClearColor(1, 0, 0, 1);
+	glClearColor(0, 0, 1, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
@@ -65,7 +65,7 @@ struct IUnityGraphics : IUnityInterface
 };
 
 typedef void(__stdcall* UnityRenderingEvent)(int eventId);
-typedef void(__stdcall* UnregisterDeviceEventCallback)(IUnityGraphicsDeviceEventCallback callback);
+void(__stdcall* UnregisterDeviceEventCallback)(IUnityGraphicsDeviceEventCallback callback);
 static UnityGfxRenderer DeviceType = kUnityGfxRendererNull;
 
 static void __stdcall OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventType)
