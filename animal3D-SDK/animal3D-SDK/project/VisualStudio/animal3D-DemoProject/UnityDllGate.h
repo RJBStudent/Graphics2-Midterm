@@ -2,7 +2,5 @@
 
 extern "C"
 {
-
 	int A3DYLIBSYMBOL foo();
-
 }
