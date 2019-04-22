@@ -1,6 +1,7 @@
 # Animal3D Plugin for Unity
 
-> Created by: RJ Bourdelais and Josh Grazda
+> Animal3D Created by: Dan Buckstein
+> Unity Plugin Extension Created by: RJ Bourdelais and Josh Grazda
 
 ## What is this?
 
