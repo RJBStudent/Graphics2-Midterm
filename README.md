@@ -8,6 +8,34 @@
 animal3D is a render pipeline created by Dan Buckstein. It was created with the intent of students
 extending the current functionality. To allow more access to what animal3D can offer to other we
 have decided to create a plugin for Unity to provide more power over the render pipeline in Unity.
+This will allow connection between Animal3D and Unity. 
+
+### Team Members and Contributions
+
+> Josh Grazda
+
+Dll gate file and unity connection test script
+
+> RJ Bourdelais
+
+Dll gate functionality with parameters and unity connection test script. Changing clear from Unity
+
+### Stable Repo Link
+
+> https://github.com/RJBStudent/Graphics2-Midterm/tree/RJ_Branch_v3
+
+## Why create this?
+
+This is a prototype at taking over Unity's rendering system for more accesibilty and acces to using gl
+rather than using Unity's shader pipeline. Using this plugin allows access to Animal3D which can provide 
+all render pipelines, vertex, fragment, geometry shaders created. In created this we hope to allow Unity 
+to have functionality over Animal3D and in turn allow Animal3D to have control of Unity's render pipeline.
+In doing this further code can be created in Animal3D to allow user friendly rendering systems. 
+
+## Original UML diagram
+
+> https://drive.google.com/file/d/1R2Gz6PCii1J1khN1LmzSZ9bzDW9hVKmT/view?usp=sharing
+
 
 ### Set-up Animal3D DLL for Unity
 
