@@ -3,6 +3,9 @@
 #include <SDKDDKVer.h>
 #include <windows.h>
 #include <GL/glew.h>
+#include "UnityDemoState.h"
+
+UnityDemoState pUnityDemoState;
 
 extern "C"
 {
@@ -16,7 +19,7 @@ extern "C"
 
 void Rendering()
 {
-	glClearColor(0,	1, 1, 1);
+	glClearColor(pUnityDemoState.r, pUnityDemoState.g, pUnityDemoState.b, pUnityDemoState.a);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
@@ -85,6 +88,7 @@ static void __stdcall OnRenderEvent(int eventID)
 	Rendering();
 }
 
+
 extern "C" void	__declspec(dllexport) __stdcall UnityPluginLoad(IUnityInterfaces* unityInterfaces)
 {
 	IUnityInterfaces* s_UnityInterfaces = unityInterfaces;
@@ -101,4 +105,12 @@ extern "C" void __declspec(dllexport) __stdcall UnityPluginUnload()
 extern "C" UnityRenderingEvent __declspec(dllexport) __stdcall Execute()
 {
 	return OnRenderEvent;
+}
+
+extern "C" void __declspec(dllexport) __stdcall SetBackgroundColor(float r, float g, float b, float a)
+{
+	pUnityDemoState.r = r;
+	pUnityDemoState.g = g;
+	pUnityDemoState.b = b;
+	pUnityDemoState.a = a;
 }

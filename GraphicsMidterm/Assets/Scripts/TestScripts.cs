@@ -14,28 +14,58 @@ public class TestScripts : MonoBehaviour
     // --- Unity IssuePluginEvent documentation ---
     // https://docs.unity3d.com/ScriptReference/GL.IssuePluginEvent.html
 
+    [SerializeField]
+    [Range(0, 1)]
+    float red = 0f;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float green = 0f;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float blue = 0f;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float alpha = 1f;
+
 
     // Other platforms load plugins dynamically, so pass the name
     // of the plugin's dynamic library.
     [DllImport("animal3D-DemoProject_x64")]
-    private static extern int foo();
-    [DllImport("animal3D-DemoProject_x64")]
-    private static extern int ColorScreen();
-    [DllImport("animal3D-DemoProject_x64")]
     private static extern IntPtr Execute();
+    
+    [DllImport("animal3D-DemoProject_x64")]
+    private static extern void SetBackgroundColor(float r, float g, float b, float a);
 
-    void Start()
+    private void Awake()
     {
-        // Debug.Log(foo());
+
+        
+
+        red = 0f;
+        green = 0f;
+        blue = 0f;
+        alpha = 1f;
+        SetBackgroundColor(red, green, blue, alpha);
+    }
+
+    private void Update()
+    {
+        
     }
 
     void OnPostRender()
     {
+        SetBackgroundColor(red, green, blue, alpha);
         GL.IssuePluginEvent(Execute(), 1);
+        
 
         // Debug.Log(ColorScreen());
         // OpenGL call that will turn camera red after rendering has happened
         // needs to be called every frame since camera renders every frame (does not work in Update)
         // GL.Clear(false, true, Color.red);
     }
+    
 }

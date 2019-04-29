@@ -208,6 +208,7 @@
     <ClInclude Include="..\..\..\source\animal3D-DemoProject\A3_DEMO\_utilities\a3_DemoSceneObject.h" />
     <ClInclude Include="..\..\..\source\animal3D-DemoProject\A3_DEMO\_utilities\a3_DemoShaderProgram.h" />
     <ClInclude Include="..\..\..\source\animal3D-DemoProject\a3_dylib_config_export.h" />
+    <ClInclude Include="UnityDemoState.h" />
     <ClInclude Include="UnityDllGate.h" />
   </ItemGroup>
   <ItemGroup>

@@ -149,6 +149,9 @@
     <ClInclude Include="UnityDllGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UnityDemoState.h">
+      <Filter>Source Files\common\A3_DEMO\a3_DemoState</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\resource\glsl\4x\fs\drawColorAttrib_fs4x.glsl">
